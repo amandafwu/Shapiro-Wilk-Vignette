@@ -424,6 +424,8 @@ significant</li>
 <div id="lets-conduct-a-shapiro-wilk-test-on-a-normalized-distribution-to-see-how-it-is-calculated" class="section level4">
 <h4>Let’s conduct a Shapiro-Wilk Test on a normalized distribution to
 see how it is calculated!</h4>
+<pre class="r"><code>library(ggpubr)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
 <pre class="r"><code>set.seed(123)
 normdata &lt;- rnorm(35, mean = 25, sd = 3)
 hist(normdata)</code></pre>
@@ -445,6 +447,7 @@ distribution</p>
 <p>The W statistic is really really close to 1 which means there’s only
 a little variation and the p-value is greater than 0.05 which means that
 we have failed to have rejected the null hypothesis.</p>
+<p>Let’s break apart the equation..</p>
 <pre class="r"><code># first, we&#39;ll calculate the sum of squares: 
 ss &lt;- sum((normdata - mean(normdata))^2)   
 ss</code></pre>
